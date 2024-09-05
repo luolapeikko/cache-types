@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"module": "NodeNext",
+		"target": "es2021",
+		"lib": ["es2021"],
+		"rootDir": "./src",
+		"outDir": "./dist",
+		"moduleResolution": "NodeNext",
+		"sourceRoot": "./src",
+		"types": ["node"],
+		"sourceMap": true,
+		"strict": true,
+		"declaration": true,
+		"removeComments": false,
+		"inlineSources": true,
+		"inlineSourceMap": false,
+		"forceConsistentCasingInFileNames": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noImplicitAny": true,
+		"importHelpers": false,
+		"strictNullChecks": true,
+		"noUnusedLocals": true,
+		"esModuleInterop": true
+	},
+	"typedocOptions": {
+		"entryPoints": ["src/index.ts"],
+		"out": "docs"
+	},
+	"include": ["src/**/*", "src/**/**/*"],
+	"exclude": ["node_modules", "**/*.spec.ts", "test"],
+	"ts-node": {
+		"esm": true
+	}
+}
