@@ -2,6 +2,7 @@
  * Asynchronous cache interface
  * @template Payload - The type of the cached value
  * @template Key - Optional type of the cache key (default is string)
+ * @version 0.0.1
  * @example
  * function foo(cache: IAsyncCache<string>) {
  *   const value = await cache.get('key');
