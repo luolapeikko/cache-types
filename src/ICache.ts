@@ -2,7 +2,7 @@
  * Synchronous cache interface
  * @template Payload - The type of the cached value
  * @template Key - Optional type of the cache key (default is string)
- * @version 0.0.1
+ * @since v0.0.1
  * @example
  * function foo(cache: ICache<string>) {
  *   const value = cache.get('key');

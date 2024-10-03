@@ -1,6 +1,6 @@
 /**
  * Cache events map.
- * @version 0.0.6
+ * @since v0.0.6
  * @example
  * class MyCache extends EventEmitter<CacheEventsMap<string>> {}
  */
