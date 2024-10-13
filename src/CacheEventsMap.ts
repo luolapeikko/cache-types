@@ -1,6 +1,6 @@
 /**
  * Cache events map.
- * @since v0.0.6
+ * @since v0.0.7
  * @example
  * class MyCache extends EventEmitter<CacheEventsMap<string>> {}
  */
@@ -10,5 +10,5 @@ export type CacheEventsMap<Payload, Key = string> = {
 	delete: [key: Key];
 	has: [key: Key];
 	expires: [key: Key, payload: Payload];
-	clear: [Map<string, Payload>];
+	clear: [Map<Key, Payload>];
 };
