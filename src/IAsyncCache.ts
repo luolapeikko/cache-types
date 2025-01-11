@@ -1,3 +1,6 @@
+import {type CacheEventsMap} from './CacheEventsMap';
+import {type EventEmitter} from 'events';
+
 /**
  * Asynchronous cache interface
  * @template Payload - The type of the cached value
@@ -83,3 +86,20 @@ export interface IAsyncCache<Payload, Key = string> {
 	 */
 	values(): IterableIterator<Payload> | AsyncIterableIterator<Payload>;
 }
+
+/**
+ * Asynchronous cache interface with events
+ * @template Payload - The type of the cached value
+ * @template Key - Optional type of the cache key (default is string)
+ * @since v0.0.8
+ * @example
+ * function foo(cache: IAsyncCacheWithEvents<string>) {
+ *   const value = await cache.get('key');
+ *   await cache.set('key', 'value');
+ *   await cache.has('key'); // true
+ *   await cache.delete('key');
+ *   await cache.clear();
+ *   await cache.size(); // 0
+ * }
+ */
+export type IAsyncCacheWithEvents<Payload, Key = string> = IAsyncCache<Payload, Key> & EventEmitter<CacheEventsMap<Payload, Key>>;

@@ -1,3 +1,6 @@
+import {type CacheEventsMap} from './CacheEventsMap';
+import {type EventEmitter} from 'events';
+
 /**
  * Synchronous cache interface
  * @template Payload - The type of the cached value
@@ -88,3 +91,20 @@ export interface ICache<Payload, Key = string> {
 	 */
 	values(): IterableIterator<Payload>;
 }
+
+/**
+ * Synchronous cache interface with events
+ * @template Payload - The type of the cached value
+ * @template Key - Optional type of the cache key (default is string)
+ * @since v0.0.8
+ * @example
+ * function foo(cache: ICacheWithEvents<string>) {
+ *   const value = cache.get('key');
+ *   cache.set('key', 'value');
+ *   cache.has('key'); // true
+ *   cache.delete('key');
+ *   cache.clear();
+ *   cache.size(); // 0
+ * }
+ */
+export type ICacheWithEvents<Payload, Key = string> = ICache<Payload, Key> & EventEmitter<CacheEventsMap<Payload, Key>>;
