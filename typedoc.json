@@ -1,6 +1,0 @@
-{
-	"entryPoints": ["src/index.ts"],
-	"plugin": [],
-	"exclude": ["dist/", "docs/", "node_modules/"],
-	"out": "docs"
-}
