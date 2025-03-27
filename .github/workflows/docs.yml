@@ -52,6 +52,7 @@ jobs:
         uses: erikyo/tsdoc-action@v1
         with:
           source_dir: ./src/*
+          output_dir: ./docs
           options: ./typedoc.json
           front_page: README.md
 
