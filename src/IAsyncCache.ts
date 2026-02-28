@@ -1,5 +1,5 @@
-import {type EventEmitter} from 'events';
-import {type CacheEventsMap} from './CacheEventsMap';
+import type {EventEmitter} from 'events';
+import type {CacheEventsMap} from './CacheEventsMap';
 
 /**
  * Asynchronous cache interface

@@ -13,10 +13,10 @@
     }
   },
   "scripts": {
-    "doc": "typedoc",
+    "docs": "typedoc",
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "prepublishOnly": "npm run build",
-    "lint": "eslint . --ext .ts",
+    "lint": "biome check",
     "validate": "tsc --noEmit --project tsconfig.test.json"
   },
   "files": [
@@ -34,25 +34,11 @@
   },
   "homepage": "https://github.com/luolapeikko/cache-types#readme",
   "devDependencies": {
-    "@cspell/eslint-plugin": "^8.18.0",
-    "@eslint/js": "^9.23.0",
-    "@stylistic/eslint-plugin": "^4.2.0",
-    "@stylistic/eslint-plugin-ts": "^4.2.0",
-    "@types/node": "^22.13.14",
-    "@typescript-eslint/eslint-plugin": "^8.28.0",
-    "@typescript-eslint/parser": "^8.28.0",
-    "eslint": "^9.23.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-import-resolver-typescript": "^4.2.5",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsdoc": "^50.6.9",
-    "eslint-plugin-prettier": "^5.2.5",
-    "eslint-plugin-sonarjs": "^3.0.2",
-    "prettier": "^3.5.3",
-    "tsup": "^8.4.0",
-    "typedoc": "^0.28.1",
-    "typescript": "^5.8.2",
-    "typescript-eslint": "^8.28.0"
+    "@biomejs/biome": "^2.4.4",
+    "@types/node": "^25.3.2",
+    "tsup": "^8.5.1",
+    "typedoc": "^0.28.17",
+    "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
+  "packageManager": "pnpm@10.30.3+sha512.c961d1e0a2d8e354ecaa5166b822516668b7f44cb5bd95122d590dd81922f606f5473b6d23ec4a5be05e7fcd18e8488d47d978bbe981872f1145d06e9a740017"
 }
